@@ -1,7 +1,8 @@
 //
-//  LaunchGood
+//  MovieDetailRouter.swift
+//  MovieHut
 //
-//  Copyright © 2022 Bismillah Ar-Rahman Ar-Raheem. All rights reserved.
+//  Created by Waqas Khan on 1/28/23.
 //
 
 import Foundation
