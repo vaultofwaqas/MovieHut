@@ -1,18 +1,16 @@
 //
-//  MovieListViewController.swift
-//  MovieHut
+//  LaunchGood
 //
-//  Created by Waqas Khan on 1/28/23.
+//  Copyright © 2022 Bismillah Ar-Rahman Ar-Raheem. All rights reserved.
 //
 
 import UIKit
 
-class MovieListViewController: BaseViewController {
+class MovieDetailViewController: BaseViewController {
 
-    var viewModel: MovieListViewModel!
+    var viewModel: MovieDetailViewModel!
     
     // MARK: - Outlets
-    @IBOutlet private var tableview: UITableView!
     
     // MARK: - Variables
     
@@ -34,36 +32,12 @@ class MovieListViewController: BaseViewController {
     }
     
     // MARK: - Set / Update Views
-    override func setupNavigation() {
-        title = "Movies"
-    }
-    
-    override func setupView() {
-        setTableViews()
-    }
-    
-    private func setTableViews() {
-        tableview.delegate = self
-        tableview.dataSource = self
-        setupTableViewNib()
-    }
-
-    private func setupTableViewNib() {
-        tableview.register(cellType: MovieRow.self)
-    }
-    
-    public func reloadTableView() {
-        DispatchQueue.main.async {
-            self.tableview.reloadData()
-            self.tableview.layoutIfNeeded()
-        }
-    }
     
     // MARK: - Actions
 }
 
 // MARK: - Bind Views
-extension MovieListViewController {
+extension MovieDetailViewController {
     
     fileprivate func bindViewModel() {
         viewModel.viewSetup = { [weak self] output in
@@ -74,7 +48,6 @@ extension MovieListViewController {
             case .setupView: self.setupView()
             case .showLoader: self.showLoader()
             case .hideLoader: self.hideLoader()
-            case .reloadView: self.reloadTableView()
             }
         }
     }

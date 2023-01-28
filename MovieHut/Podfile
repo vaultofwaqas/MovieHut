@@ -7,7 +7,7 @@ target 'MovieHut' do
 
   # Pods for MovieHut
 
-
+  pod 'R.swift'
   pod 'Kingfisher'
 
 end

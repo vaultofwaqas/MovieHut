@@ -9,6 +9,18 @@ import UIKit
 
 class MovieRow: UITableViewCell {
     
-    public func bind() {
+    @IBOutlet weak var imageMovie: UIImageView!
+    @IBOutlet weak var labelMovieTitle: UILabel!
+    @IBOutlet weak var labelMovieDate: UILabel!
+    
+    public func bind(_ movie: Movie) {
+        labelMovieTitle.text = movie.originalTitle
+        labelMovieDate.text = movie.releaseDate
+        getMovieImage(movie.getPosteUrl())
+    }
+    
+    func getMovieImage(_ withUrl: String) {
+        imageMovie.image = R.image.placeholder()
+        KFImageManager.setImage(url: withUrl, imageView: imageMovie)
     }
 }

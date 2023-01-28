@@ -1,16 +1,20 @@
 PODS:
   - Kingfisher (7.5.0)
+  - R.swift (7.2.4)
 
 DEPENDENCIES:
   - Kingfisher
+  - R.swift
 
 SPEC REPOS:
   trunk:
     - Kingfisher
+    - R.swift
 
 SPEC CHECKSUMS:
   Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
+  R.swift: 681bb9135f482e7a81d9d27445b837fef5467e11
 
-PODFILE CHECKSUM: 553201fa9cb9f64a117098947cd80b3a07f93a93
+PODFILE CHECKSUM: 8fcdd07526e74642054ea1d922a4823d4a3f5c67
 
 COCOAPODS: 1.11.3

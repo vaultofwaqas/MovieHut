@@ -21,6 +21,7 @@
 		AF0E335829850E4A0016F7EF /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E335729850E4A0016F7EF /* Shortcuts.swift */; };
 		AF0E335B29850E760016F7EF /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E335A29850E760016F7EF /* StoryBoard.swift */; };
 		AF0E335E29850EE10016F7EF /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E335D29850EE10016F7EF /* UIStoryboard+Extension.swift */; };
+		AF79B6F629857111001D69AE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79B6F529857111001D69AE /* R.generated.swift */; };
 		AFA8586D298519F700AC80D0 /* APINetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8586C298519F700AC80D0 /* APINetworkSession.swift */; };
 		AFA8586F29851A3500AC80D0 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8586E29851A3500AC80D0 /* URLRequest+Extension.swift */; };
 		AFA8587329851AA300AC80D0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8587229851AA300AC80D0 /* APIService.swift */; };
@@ -38,6 +39,12 @@
 		AFA8589229854D4000AC80D0 /* MovieListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8589129854D4000AC80D0 /* MovieListViewController+TableView.swift */; };
 		AFA8589729854E7300AC80D0 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8589529854E7300AC80D0 /* MovieRow.swift */; };
 		AFA8589829854E7300AC80D0 /* MovieRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA8589629854E7300AC80D0 /* MovieRow.xib */; };
+		AFA8589B2985652500AC80D0 /* KFImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8589A2985652500AC80D0 /* KFImageManager.swift */; };
+		AFA8589E2985683900AC80D0 /* ApplicationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8589D2985683900AC80D0 /* ApplicationEnums.swift */; };
+		AFC1EA772985755A00D58184 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1EA762985755A00D58184 /* UIView+Extensions.swift */; };
+		AFC1EA852985765700D58184 /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1EA812985765700D58184 /* MovieDetailRouter.swift */; };
+		AFC1EA862985765700D58184 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1EA822985765700D58184 /* MovieDetailViewController.swift */; };
+		AFC1EA872985765700D58184 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1EA832985765700D58184 /* MovieDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +66,7 @@
 		AF0E335729850E4A0016F7EF /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		AF0E335A29850E760016F7EF /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
 		AF0E335D29850EE10016F7EF /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		AF79B6F529857111001D69AE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		AFA8586C298519F700AC80D0 /* APINetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINetworkSession.swift; sourceTree = "<group>"; };
 		AFA8586E29851A3500AC80D0 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
 		AFA8587229851AA300AC80D0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -76,6 +84,12 @@
 		AFA8589129854D4000AC80D0 /* MovieListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieListViewController+TableView.swift"; sourceTree = "<group>"; };
 		AFA8589529854E7300AC80D0 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
 		AFA8589629854E7300AC80D0 /* MovieRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieRow.xib; sourceTree = "<group>"; };
+		AFA8589A2985652500AC80D0 /* KFImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFImageManager.swift; sourceTree = "<group>"; };
+		AFA8589D2985683900AC80D0 /* ApplicationEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationEnums.swift; sourceTree = "<group>"; };
+		AFC1EA762985755A00D58184 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		AFC1EA812985765700D58184 /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
+		AFC1EA822985765700D58184 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		AFC1EA832985765700D58184 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +118,6 @@
 				7CE9B68517F277DEE80FDAF4 /* Pods-MovieHut.debug.xcconfig */,
 				37EEAF18B1C38C1CDEA00CEF /* Pods-MovieHut.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,6 +149,7 @@
 				AF0E334529847F2A0016F7EF /* Modules */,
 				AF0E335C29850ECC0016F7EF /* Extensions */,
 				AFA8587629851B0F00AC80D0 /* Helpers */,
+				AFA858992985651500AC80D0 /* ImageManager */,
 				AFA8586B2985198000AC80D0 /* Network */,
 				AF0E334429847C1A0016F7EF /* Storyboards */,
 				AF0E334329847C0D0016F7EF /* Resources */,
@@ -155,6 +169,7 @@
 		AF0E334329847C0D0016F7EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF79B6F529857111001D69AE /* R.generated.swift */,
 				AF0E333C298473560016F7EF /* Info.plist */,
 				AF0E3337298473560016F7EF /* Assets.xcassets */,
 			);
@@ -194,6 +209,9 @@
 		AF0E334729847F3C0016F7EF /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
+				AFC1EA812985765700D58184 /* MovieDetailRouter.swift */,
+				AFC1EA822985765700D58184 /* MovieDetailViewController.swift */,
+				AFC1EA832985765700D58184 /* MovieDetailViewModel.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -219,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0E335A29850E760016F7EF /* StoryBoard.swift */,
+				AFA8589D2985683900AC80D0 /* ApplicationEnums.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -230,6 +249,7 @@
 				AFA8588A2985301E00AC80D0 /* Optional+Extension.swift */,
 				AFA8588D2985496700AC80D0 /* UITableView+Extensions.swift */,
 				AFA8588F29854AED00AC80D0 /* NSObject+Extensions.swift */,
+				AFC1EA762985755A00D58184 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +344,14 @@
 			path = MovieRow;
 			sourceTree = "<group>";
 		};
+		AFA858992985651500AC80D0 /* ImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				AFA8589A2985652500AC80D0 /* KFImageManager.swift */,
+			);
+			path = ImageManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,6 +360,7 @@
 			buildConfigurationList = AF0E333F298473560016F7EF /* Build configuration list for PBXNativeTarget "MovieHut" */;
 			buildPhases = (
 				AAC373550EF4AFC74DCABC4D /* [CP] Check Pods Manifest.lock */,
+				AFA8589C2985659200AC80D0 /* R.swift */,
 				AF0E3327298473540016F7EF /* Sources */,
 				AF0E3328298473540016F7EF /* Frameworks */,
 				AF0E3329298473540016F7EF /* Resources */,
@@ -433,6 +462,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AFA8589C2985659200AC80D0 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/MovieHut/Resources/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -451,11 +499,18 @@
 				AF0E335829850E4A0016F7EF /* Shortcuts.swift in Sources */,
 				AF0E334E29847F730016F7EF /* MovieListRouter.swift in Sources */,
 				AFA8588329851C7A00AC80D0 /* Network+Extension.swift in Sources */,
+				AFC1EA852985765700D58184 /* MovieDetailRouter.swift in Sources */,
+				AFC1EA862985765700D58184 /* MovieDetailViewController.swift in Sources */,
+				AF79B6F629857111001D69AE /* R.generated.swift in Sources */,
+				AFC1EA772985755A00D58184 /* UIView+Extensions.swift in Sources */,
 				AF0E335E29850EE10016F7EF /* UIStoryboard+Extension.swift in Sources */,
 				AF0E3331298473540016F7EF /* SceneDelegate.swift in Sources */,
+				AFC1EA872985765700D58184 /* MovieDetailViewModel.swift in Sources */,
 				AFA8586D298519F700AC80D0 /* APINetworkSession.swift in Sources */,
 				AFA8588E2985496700AC80D0 /* UITableView+Extensions.swift in Sources */,
 				AF0E334F29847F730016F7EF /* MovieListViewController.swift in Sources */,
+				AFA8589B2985652500AC80D0 /* KFImageManager.swift in Sources */,
+				AFA8589E2985683900AC80D0 /* ApplicationEnums.swift in Sources */,
 				AFA8588629851F0A00AC80D0 /* MovieManager.swift in Sources */,
 				AFA8589029854AED00AC80D0 /* NSObject+Extensions.swift in Sources */,
 				AFA8587D29851BA600AC80D0 /* ServicePayload.swift in Sources */,

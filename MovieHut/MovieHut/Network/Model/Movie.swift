@@ -46,4 +46,8 @@ struct Movie: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
+    
+    func getPosteUrl() -> String {
+        return "\(ServiceConstants.posterImageBaseUrl)\(posterPath.orNil)"
+    }
 }

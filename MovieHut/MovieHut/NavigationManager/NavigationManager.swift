@@ -47,6 +47,7 @@ extension NavigationManager {
     // MARK: - Start Movie Flow
     private func showMoviesView() {
         let controller = MovieListRouter.createModule()
-        window.rootViewController = controller
+        let nav = UINavigationController(rootViewController: controller)
+        window.rootViewController = nav
     }
 }

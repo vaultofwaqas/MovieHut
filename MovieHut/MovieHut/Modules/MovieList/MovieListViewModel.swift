@@ -13,6 +13,7 @@ protocol MovieListViewModel {
     var viewSetup: MovieListViewModelViewSetup? { get set }
     
     // MARK: - Variable Protocols
+    var movieSections: [MovieListSection] { get set }
     var movies: [Movie] { get set }
     
     // MARK: - Lifecycle Protocols
@@ -21,6 +22,7 @@ protocol MovieListViewModel {
     func viewModelWillDisappear()
     
     // MARK: - Route Protocols
+    func goToMovieDetail(_ movie: Movie)
     
     // MARK: - API Protocols
     
@@ -35,6 +37,7 @@ class MovieListViewModelImpl {
     
     // MARK: - Variables
     var movieManager: MovieManager
+    var movieSections: [MovieListSection] = []
     var movies: [Movie] = []
     
     // MARK: - Initializer
@@ -49,8 +52,7 @@ class MovieListViewModelImpl {
         case setupView
         case showLoader
         case hideLoader
-        case showSuccessMessage(withMessage: String)
-        case showErrorMessage(withMessage: String)
+        case reloadView
     }
 }
 
@@ -59,6 +61,7 @@ extension MovieListViewModelImpl: MovieListViewModel {
     func viewModelDidLoad() {
         viewSetup?(.setupNavigation)
         viewSetup?(.setupView)
+        populateSections()
         movieListApi(setMovieListPayload())
     }
     
@@ -69,7 +72,9 @@ extension MovieListViewModelImpl: MovieListViewModel {
 
 // MARK: - Route Functions
 extension MovieListViewModelImpl {
-
+    func goToMovieDetail(_ movie: Movie) {
+        router.goToMovieDetail(movie)
+    }
 }
 
 // MARK: - API Functions
@@ -87,6 +92,7 @@ extension MovieListViewModelImpl {
             switch result {
             case .success(let movieBase):
                 self.movies = movieBase.movies ?? []
+                self.viewSetup?(.reloadView)
             case .failure: break
             }
         }
@@ -95,5 +101,8 @@ extension MovieListViewModelImpl {
 
 // MARK: - Logic Functions
 extension MovieListViewModelImpl {
-
+    private func populateSections() {
+        movieSections = [.movie]
+        viewSetup?(.reloadView)
+    }
 }

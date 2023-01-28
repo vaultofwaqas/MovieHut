@@ -28,5 +28,8 @@ class MovieListRouter {
 
 // MARK: - Route Functions
 extension MovieListRouter {
-
+    func goToMovieDetail(_ movie: Movie) {
+        let navigationController = viewController?.navigationController
+        navigationController?.pushViewController(MovieDetailRouter.createModule(), animated: true)
+    }
 }
