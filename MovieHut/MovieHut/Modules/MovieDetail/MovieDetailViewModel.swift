@@ -12,6 +12,7 @@ protocol MovieDetailViewModel {
     var viewSetup: MovieDetailViewModelViewSetup? { get set }
     
     // MARK: - Variable Protocols
+    var movie: Movie? { get set }
     
     // MARK: - Lifecycle Protocols
     func viewModelDidLoad()
@@ -32,10 +33,13 @@ class MovieDetailViewModelImpl {
     var viewSetup: MovieDetailViewModelViewSetup?
     
     // MARK: - Variables
+    var movieManager: MovieManager
+    var movie: Movie?
     
     // MARK: - Initializer
     init(router: MovieDetailRouter) {
         self.router = router
+        movieManager = MovieManager()
     }
     
     // MARK: - For all of your viewBindings
@@ -52,6 +56,7 @@ extension MovieDetailViewModelImpl: MovieDetailViewModel {
     func viewModelDidLoad() {
         viewSetup?(.setupNavigation)
         viewSetup?(.setupView)
+        movieDetailApi(setMovieDetailPayload())
     }
     
     func viewModelWillAppear() {}
@@ -66,10 +71,28 @@ extension MovieDetailViewModelImpl {
 
 // MARK: - API Functions
 extension MovieDetailViewModelImpl {
-
+    
+    func setMovieDetailPayload() -> ServicePayload {
+        var payload = ServicePayload()
+        payload.setPayload(baseUrl: ServiceConstants.movieDetailUrl, apiEndPoint: .movieDetail(movie?.id ?? 0, ServiceConstants.apiKey), requestType: .get)
+        return payload
+    }
+    
+    func movieDetailApi(_ withPayload: ServicePayload) {
+        movieManager.movieDetailApi(payload: withPayload) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let movie): self.populateMovie(movie)
+            case .failure: break
+            }
+        }
+    }
 }
 
 // MARK: - Logic Functions
 extension MovieDetailViewModelImpl {
-
+    private func populateMovie(_ movie: Movie) {
+        self.movie = movie
+        DispatchQueue.main.async { self.viewSetup?(.setupView) }
+    }
 }

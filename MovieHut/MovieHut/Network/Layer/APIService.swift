@@ -59,18 +59,18 @@ extension APIService {
         task = apiNetworkSession.dataTask(request, completionHandler: { result in
             switch result {
             case .success(let response):
-                print("------------------------------------------------")
-                print("STATUS_CODE: \(response.response.statusCode)")
-                print("ROUTE: \(request.url?.absoluteString ?? "")")
-                print("METHOD: \(request.method ?? .get)")
-                print("HEADERS: \(request.allHTTPHeaderFields?.getJsonFromDictionary ?? "")")
+                Log.debug("------------------------------------------------")
+                Log.debug("STATUS_CODE: \(response.response.statusCode)")
+                Log.debug("ROUTE: \(request.url?.absoluteString ?? "")")
+                Log.debug("METHOD: \(request.method ?? .get)")
+                Log.debug("HEADERS: \(request.allHTTPHeaderFields?.getJsonFromDictionary ?? "")")
                 
                 if let parameter = request.httpBody?.getJSONFromData {
-                    print("PARAMETERS: \(parameter)")
+                    Log.debug("PARAMETERS: \(parameter)")
                 }
                 
                 if let dataJsonResponse = response.data.getJSONFromData {
-                    print(("RESPONSE: \(dataJsonResponse)"))
+                    Log.debug(("RESPONSE: \(dataJsonResponse)"))
                 }
                 Log.debug("------------------------------------------------")
                 

@@ -11,7 +11,12 @@ class MovieDetailRouter {
     
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
+    @IBOutlet weak var imageMovie: UIImageView!
+    @IBOutlet weak var labelMovieTitle: UILabel!
+    @IBOutlet weak var labelMovieDate: UILabel!
+    @IBOutlet weak var labelMovieDescription: UILabel!
+    
+    static func createModule(_ movie: Movie) -> UIViewController {
         
         let storyboard = getStoryBoard(.movie)
         let view = storyboard.instantiateViewController(ofType: MovieDetailViewController.self)
@@ -20,6 +25,8 @@ class MovieDetailRouter {
         
         view.viewModel = viewModel
         router.viewController = view
+        
+        viewModel.movie = movie
 
         return view
     }

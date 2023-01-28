@@ -16,11 +16,6 @@ class MovieRow: UITableViewCell {
     public func bind(_ movie: Movie) {
         labelMovieTitle.text = movie.originalTitle
         labelMovieDate.text = movie.releaseDate
-        getMovieImage(movie.getPosteUrl())
-    }
-    
-    func getMovieImage(_ withUrl: String) {
-        imageMovie.image = R.image.placeholder()
-        KFImageManager.setImage(url: withUrl, imageView: imageMovie)
+        KFImageManager.setImage(url: movie.getPosterUrl(), imageView: imageMovie)
     }
 }

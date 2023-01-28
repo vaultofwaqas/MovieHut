@@ -12,5 +12,5 @@ struct ServiceConstants {
     
     static let posterImageBaseUrl = "https://image.tmdb.org/t/p/w500/"
     static let movieListUrl = "https://api.themoviedb.org/3/discover/movie"
-    static let movieDetailUrl = "https://developers.themoviedb.org/3/movies"
+    static let movieDetailUrl = "https://api.themoviedb.org/3/movie"
 }

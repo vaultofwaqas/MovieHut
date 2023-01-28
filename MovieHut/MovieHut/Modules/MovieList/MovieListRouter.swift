@@ -30,6 +30,6 @@ class MovieListRouter {
 extension MovieListRouter {
     func goToMovieDetail(_ movie: Movie) {
         let navigationController = viewController?.navigationController
-        navigationController?.pushViewController(MovieDetailRouter.createModule(), animated: true)
+        navigationController?.pushViewController(MovieDetailRouter.createModule(movie), animated: true)
     }
 }

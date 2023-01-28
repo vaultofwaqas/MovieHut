@@ -11,6 +11,10 @@ class MovieDetailViewController: BaseViewController {
     var viewModel: MovieDetailViewModel!
     
     // MARK: - Outlets
+    @IBOutlet weak var imageMovie: UIImageView!
+    @IBOutlet weak var labelMovieTitle: UILabel!
+    @IBOutlet weak var labelMovieDate: UILabel!
+    @IBOutlet weak var labelMovieDescription: UILabel!
     
     // MARK: - Variables
     
@@ -32,6 +36,12 @@ class MovieDetailViewController: BaseViewController {
     }
     
     // MARK: - Set / Update Views
+    override func setupView() {
+        labelMovieTitle.text = viewModel.movie?.originalTitle.orNil
+        labelMovieDate.text = viewModel.movie?.releaseDate.orNil
+        labelMovieDescription.text = viewModel.movie?.overview.orNil
+        KFImageManager.setImage(url: viewModel.movie?.getPosterUrl() ?? "", imageView: imageMovie)
+    }
     
     // MARK: - Actions
 }

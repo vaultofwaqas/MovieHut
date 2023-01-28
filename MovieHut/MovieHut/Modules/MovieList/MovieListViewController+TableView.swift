@@ -33,6 +33,21 @@ extension MovieListViewController: UITableViewDataSource {
         case .movie: return movieCell(tableView, indexPath: indexPath)
         }
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        switch viewModel.handlePaging(indexPath.item + 1) {
+        case true:
+            let spinner = UIActivityIndicatorView(style: .large)
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(100))
+
+            tableView.tableFooterView = spinner
+            tableView.tableFooterView?.isHidden = false
+        case false:
+            tableView.tableFooterView = nil
+            tableView.tableFooterView?.isHidden = true
+        }
+    }
 }
 
 // MARK: - TableView Cell Views

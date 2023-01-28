@@ -13,6 +13,7 @@ class MovieListViewController: BaseViewController {
     
     // MARK: - Outlets
     @IBOutlet private var tableview: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Variables
     
@@ -56,6 +57,16 @@ class MovieListViewController: BaseViewController {
         DispatchQueue.main.async {
             self.tableview.reloadData()
             self.tableview.layoutIfNeeded()
+        }
+    }
+    
+    override func showLoader() {
+        activityIndicator.startAnimating()
+    }
+    
+    override func hideLoader() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
         }
     }
     
