@@ -65,11 +65,11 @@ extension APIService {
                 Log.debug("METHOD: \(request.method ?? .get)")
                 Log.debug("HEADERS: \(request.allHTTPHeaderFields?.getJsonFromDictionary ?? "")")
                 
-                if let parameter = request.httpBody?.getJSONFromData {
+                if let parameter = request.httpBody?.getJsonFromData {
                     Log.debug("PARAMETERS: \(parameter)")
                 }
                 
-                if let dataJsonResponse = response.data.getJSONFromData {
+                if let dataJsonResponse = response.data.getJsonFromData {
                     Log.debug(("RESPONSE: \(dataJsonResponse)"))
                 }
                 Log.debug("------------------------------------------------")
